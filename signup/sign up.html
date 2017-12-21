@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <title>signup</title>
+    <link rel="stylesheet" type="text/css" href="css/sign.css" />
+</head>
+<style>
+  
+</style>
+<body>
+
+<div>
+    <p class="top">新用户注册</p>
+</div>
+<div class="sign-wrapper">
+    <ul class="list-container">
+        <li class="list-item"><label style="margin-right: -50px;">手机号</label><input type="text" placeholder="请输入手机号" class="user" id="phonenum"></li>
+        <li class="list-item"><label style="margin-right: -38px;">姓名</label><input type="text" placeholder="请输入姓名" class="password" id="namee"></li>
+    </ul>
+    <button id="login" onclick="signup()">注册</button>
+</div>
+
+<script>
+    function signup() {
+        var phonenum = document.getElementById('phonenum').value;
+        var namee = document.getElementById('namee').value;
+        console.log(phonenum, namee);
+        if (phonenum && namee) {
+            window.location.href = './verification.html';
+        } else {
+            alert('请填写完整信息！');
+        }
+    }
+</script>
+
+</body>
+</html>

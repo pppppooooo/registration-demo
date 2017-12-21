@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+    }
+</style>
+<body>
+<h3 id="welcome">用户</h3>
+
+<script>
+    var user = window.location.href.split('?')[1].split('=')[1];
+    document.getElementById('welcome').innerText = '用户：' + user;
+</script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <title>demo</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    input {
+        font-size: 14px;
+        outline: none;
+        border: none;
+    }
+
+    ul li {
+        list-style: none;
+    }
+
+    .sign-wrapper {
+        display: flex;
+        flex-direction: column;
+        margin: 100px 40px 20px;
+    }
+
+    .new-user {
+        margin: 10px 20px;
+    }
+
+    .list-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .list-item {
+        height: 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+
+    .list-item span {
+        width: 30%;
+    }
+
+    .user, .password {
+        line-height: 2em;
+        flex: 1;
+        text-indent: 1em;
+        border-bottom: 1px solid #eee;
+
+    }
+
+    #login {
+        width: 100%;
+        border: 1px solid #eee;
+        background-color: #fff;
+        color: #000;
+        margin: 20px auto;
+        font-size: 14px;
+        padding: 10px;
+        outline: none;
+    }
+</style>
+<body>
+
+<div class="sign-wrapper">
+    <ul class="list-container">
+        <li class="list-item"><input type="text" placeholder="用户名" class="user" id="user"></li>
+        <li class="list-item"><input type="text" placeholder="密码" class="password" id="password"></li>
+    </ul>
+    <button id="login" onclick="goHome()">登录</button>
+</div>
+
+<script>
+    function goHome() {
+        var user = document.getElementById('user').value;
+        var password = document.getElementById('password').value;’
+        console.log(user, password);
+        if (user && password) {
+            window.location.href = './home.html?user='+user;
+        } else {
+            alert('请填写完整信息！');
+        }
+    }
+</script>
+
+</body>
+</html>
